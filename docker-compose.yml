@@ -25,10 +25,7 @@ services:
     depends_on: 
       - logstash
       - kibana
-    deploy:
-      restart_policy:
-        condition: always
-        delay: 5s
+    restart: always
     logging:
       driver: 'json-file'
       options:
